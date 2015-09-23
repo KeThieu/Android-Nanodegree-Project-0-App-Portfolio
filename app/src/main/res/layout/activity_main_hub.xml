@@ -1,12 +1,16 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainHub"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
     <TextView android:text="@string/title" android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -19,54 +23,53 @@
         android:paddingBottom="30dp"
         />
 
-    <Button android:id="@+id/Popular_Movies_App" android:layout_width="200dp"
+    <Button android:id="@+id/Popular_Movies_App" android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content" android:gravity="center"
         android:text="@string/PopularMovies"
         android:onClick="createToast"
         android:background="#00CC00"></Button>
 
-    <View android:layout_width="0dp" android:layout_height="10dp"></View>
+    <View android:layout_width="0dp" android:layout_height="@dimen/spacingDimen"></View>
 
-    <Button android:id="@+id/Scores_App" android:layout_width="200dp"
+    <Button android:id="@+id/Scores_App" android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content" android:gravity="center"
         android:text="@string/Scores"
         android:onClick="createToast"
         android:background="#cc33ff"></Button>
 
-    <View android:layout_width="0dp" android:layout_height="10dp"></View>
+    <View android:layout_width="0dp" android:layout_height="@dimen/spacingDimen"></View>
 
-    <Button android:id="@+id/Library_App" android:layout_width="200dp"
+    <Button android:id="@+id/Library_App" android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content" android:gravity="center"
         android:text="@string/Library"
         android:onClick="createToast"
         android:background="#cc33ff"></Button>
 
-    <View android:layout_width="0dp" android:layout_height="10dp"></View>
+    <View android:layout_width="0dp" android:layout_height="@dimen/spacingDimen"></View>
 
-    <Button android:id="@+id/Build_It_Bigger_App" android:layout_width="200dp"
+    <Button android:id="@+id/Build_It_Bigger_App" android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content" android:gravity="center"
         android:text="@string/Build_It_Bigger"
         android:onClick="createToast"
         android:background="#0099cc"></Button>
 
-    <View android:layout_width="0dp" android:layout_height="10dp"></View>
+    <View android:layout_width="0dp" android:layout_height="@dimen/spacingDimen"></View>
 
-    <Button android:id="@+id/XYZ_App" android:layout_width="200dp"
+    <Button android:id="@+id/XYZ_App" android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content" android:gravity="center"
         android:text="@string/XYZ_Reader"
         android:onClick="createToast"
         android:background="#FFFF00"></Button>
 
-    <View android:layout_width="0dp" android:layout_height="10dp"></View>
+    <View android:layout_width="0dp" android:layout_height="@dimen/spacingDimen"></View>
 
-    <Button android:id="@+id/Capstone_App" android:layout_width="200dp"
+    <Button android:id="@+id/Capstone_App" android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content" android:gravity="center"
         android:text="@string/Capstone"
         android:onClick="createToast"
         android:background="#FF0000"
         ></Button>
 
+    </LinearLayout>
 
-
-
-</LinearLayout>
+</ScrollView>

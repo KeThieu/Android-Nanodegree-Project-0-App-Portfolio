@@ -10,45 +10,28 @@ import android.widget.Toast;
 
 public class MainHub extends AppCompatActivity {
 
+    private Toast displayedToast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hub);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_hub, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     public void createToast(View view) {
         Button CurButton = (Button)view;
-        int buttonID = CurButton.getId();
-        CharSequence displayedToastMessage;
+       // int buttonID = CurButton.getId();
+        CharSequence displayedToastMessage = CurButton.getText().toString();
         int duration = Toast.LENGTH_SHORT;
+
+        /*
         switch(buttonID) {
             case R.id.Popular_Movies_App:
-                displayedToastMessage = "This button will launch the Popular Movies App.";
+                displayedToastMessage = CurButton.getText().toString();
                 break;
             case R.id.Scores_App:
-                displayedToastMessage = "This button will launch the FootBall Scores App.";
+                displayedToastMessage = CurButton.getText().toString();
                 break;
             case R.id.Library_App:
                 displayedToastMessage = "This button will launch the Library App.";
@@ -66,8 +49,13 @@ public class MainHub extends AppCompatActivity {
                 displayedToastMessage = "No button was pressed.";
                 break;
         }
+        */
 
-        Toast displayedToast = Toast.makeText(getApplicationContext(), displayedToastMessage, duration);
+        if(displayedToast != null) {
+            displayedToast.cancel();
+        }
+
+        displayedToast = Toast.makeText(getApplicationContext(), displayedToastMessage, duration);
         displayedToast.show();
     }
 }
